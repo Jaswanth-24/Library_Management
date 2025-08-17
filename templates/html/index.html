@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matter Management System</title>
+    <meta charset="UTF-8">
+</head>
+<body style="margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #eef2f5;">
+
+    <!-- Navbar (no changes per request) -->
+    <div style="background-color: #1e2a38; padding: 20px 0;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; color: white; padding: 0 20px;">
+            <h1 style="margin: 0; font-size: 26px;">📚 Library Management</h1>
+            <div style="display: flex; align-items: center;">
+                <a href="{% url 'index' %}" style="color: white; margin: 0 15px; text-decoration: none; font-weight: 500;">Home</a>
+                <a href="{% url 'books' %}" style="color: white; margin: 0 15px; text-decoration: none; font-weight: 500;">Books</a>
+                <a href="{% url 'return' %}" style="color: white; margin: 0 15px; text-decoration: none; font-weight: 500;">Return</a>
+                <a href="{% url 'contact' %}" style="color: white; margin: 0 15px; text-decoration: none; font-weight: 500;">Contact</a>
+                <form action="{% url 'home' %}" method="get" style="margin-left: 15px;">
+                    <button type="submit" style="background-color: #e74c3c; border: none; padding: 8px 16px; color: white; font-size: 16px; border-radius: 4px; cursor: pointer;">
+                        Logout
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Updated Welcome Section -->
+    <div style="text-align: center; padding: 60px 20px;">
+        <h2 style="font-size: 34px; color: #2c3e50; margin-bottom: 10px;">Welcome to the Matter Portal</h2>
+        <p style="font-size: 18px; color: #555;">Centralize and streamline your matter tracking, members, and transactions effortlessly.</p>
+        <div style="margin-top: 25px; display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
+            <div style="background-color: #ffffff; padding: 15px 25px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); font-size: 14px; color: #2c3e50;">
+                ⭐ Quick Actions: View Matters
+            </div>
+            <div style="background-color: #ffffff; padding: 15px 25px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); font-size: 14px; color: #2c3e50;">
+                👥 Manage Participants
+            </div>
+            <div style="background-color: #ffffff; padding: 15px 25px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); font-size: 14px; color: #2c3e50;">
+                🔄 Track Returns
+            </div>
+        </div>
+    </div>
+
+    <!-- Feature Cards -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 20px;">
+        
+        <!-- Card: Manage Books -->
+        <div style="background-color: #ffffff; width: 280px; padding: 30px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: 0.3s; text-align: center;">
+            <h3 style="color: #2c3e50; margin-bottom: 10px;">📘 Manage Books</h3>
+            <p style="color: #666;">Add, edit, and organize your book catalog efficiently.</p>
+        </div>
+
+        <!-- Card: Manage Members -->
+        <div style="background-color: #ffffff; width: 280px; padding: 30px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: 0.3s; text-align: center;">
+            <h3 style="color: #2c3e50; margin-bottom: 10px;">👤 Manage Members</h3>
+            <p style="color: #666;">Register new members and maintain user records easily.</p>
+        </div>
+
+        <!-- Card: Issue/Return -->
+        <div style="background-color: #ffffff; width: 280px; padding: 30px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: 0.3s; text-align: center;">
+            <h3 style="color: #2c3e50; margin-bottom: 10px;">🔄 Issue / Return</h3>
+            <p style="color: #666;">Issue books, return them, and track all borrowing history.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="text-align: center; padding: 30px 10px; background-color: #1e2a38; color: #ccc; font-size: 14px;">
+        &copy; 2025 Matter Management System. All rights reserved.
+    </div>
+
+</body>
+</html>

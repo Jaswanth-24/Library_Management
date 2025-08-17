@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books - Library Management</title>
+</head>
+<body style="margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #eef2f5;">
+
+    <!-- Navbar -->
+    <div style="background-color: #1e2a38; padding: 20px 0;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; color: white; padding: 0 20px;">
+            <h1 style="margin: 0; font-size: 26px;">📚 Library Management</h1>
+            <div style="display: flex; align-items: center;">
+                <a href="{% url 'index' %}" style="color: white; margin: 0 15px; text-decoration: none; font-weight: 500;">Home</a>
+                <a href="{% url 'books' %}" style="color: white; margin: 0 15px; text-decoration: none; font-weight: 500;">Books</a>
+                <a href="{% url 'return' %}" style="color: white; margin: 0 15px; text-decoration: none; font-weight: 500;">Return</a>
+                <a href="{% url 'contact' %}" style="color: white; margin: 0 15px; text-decoration: none; font-weight: 500;">Contact</a>
+                <form action="{% url 'home' %}" method="get" style="margin-left: 15px;">
+                    <button type="submit" style="background-color: #e74c3c; border: none; padding: 8px 16px; color: white; font-size: 16px; border-radius: 4px; cursor: pointer;">
+                        Logout
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div style="max-width: 1200px; margin: 50px auto; padding: 20px;">
+        <h2 style="color: #2c3e50; text-align: center; font-size: 32px;">📖 Books Available</h2>
+        <p style="text-align: center; font-size: 16px; color: #555;">Explore the books in our library collection.</p>
+
+        <!-- Search Bar -->
+        <form action="#" method="GET" style="margin: 30px auto 40px auto; max-width: 500px; display: flex;">
+            <input type="text" name="query" placeholder="Search by title, author, or genre"
+                style="flex: 1; padding: 12px 15px; font-size: 16px; border: 1px solid #ccc; border-radius: 6px 0 0 6px;">
+            <button type="submit"
+                style="padding: 12px 20px; background-color: #1e2a38; color: white; font-size: 16px; border: none; border-radius: 0 6px 6px 0; cursor: pointer;">
+                Search
+            </button>
+        </form>
+
+        <!-- Book Grid -->
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+            <!-- Book Card -->
+            <div style="background-color: white; width: 260px; padding: 25px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: left;">
+                <h3 style="color: #2c3e50; margin-top: 0;">The Great Gatsby</h3>
+                <p><strong>Author:</strong> F. Scott Fitzgerald</p>
+                <p><strong>Genre:</strong> Classic</p>
+                <p><strong>Status:</strong> Available</p>
+            </div>
+
+            <div style="background-color: white; width: 260px; padding: 25px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: left;">
+                <h3 style="color: #2c3e50; margin-top: 0;">1984</h3>
+                <p><strong>Author:</strong> George Orwell</p>
+                <p><strong>Genre:</strong> Dystopian</p>
+                <p><strong>Status:</strong> Issued</p>
+            </div>
+
+            <div style="background-color: white; width: 260px; padding: 25px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: left;">
+                <h3 style="color: #2c3e50; margin-top: 0;">To Kill a Mockingbird</h3>
+                <p><strong>Author:</strong> Harper Lee</p>
+                <p><strong>Genre:</strong> Fiction</p>
+                <p><strong>Status:</strong> Available</p>
+            </div>
+
+            <div style="background-color: white; width: 260px; padding: 25px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: left;">
+                <h3 style="color: #2c3e50; margin-top: 0;">Clean Code</h3>
+                <p><strong>Author:</strong> Robert C. Martin</p>
+                <p><strong>Genre:</strong> Programming</p>
+                <p><strong>Status:</strong> Available</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="text-align: center; padding: 30px 10px; background-color: #1e2a38; color: #ccc; font-size: 14px;">
+        &copy; 2025 Library Management System. All rights reserved.
+    </div>
+
+</body>
+</html>

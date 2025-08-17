@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us - Library Management</title>
+</head>
+<body style="margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f5f7fa;">
+
+    <!-- Navbar -->
+    <div style="background-color: #1e2a38; padding: 20px 0;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; color: white; padding: 0 20px;">
+            <h1 style="margin: 0; font-size: 26px;">📚 Library Management</h1>
+            <div style="display: flex; align-items: center;">
+                <a href="{% url 'index' %}" style="color: white; margin: 0 15px; text-decoration: none; font-weight: 500;">Home</a>
+                <a href="{% url 'books' %}" style="color: white; margin: 0 15px; text-decoration: none; font-weight: 500;">Books</a>
+                <a href="{% url 'return' %}" style="color: white; margin: 0 15px; text-decoration: none; font-weight: 500;">Return</a>
+                <a href="{% url 'contact' %}" style="color: white; margin: 0 15px; text-decoration: none; font-weight: 500;">Contact</a>
+                <form action="{% url 'home' %}" method="get" style="margin-left: 15px;">
+                    <button type="submit" style="background-color: #e74c3c; border: none; padding: 8px 16px; color: white; font-size: 16px; border-radius: 4px; cursor: pointer;">
+                        Logout
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div style="max-width: 900px; margin: 50px auto; background-color: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+        <h2 style="color: #2c3e50; text-align: center; margin-bottom: 20px;">📬 Contact Us</h2>
+        <p style="text-align: center; font-size: 16px; color: #555;">Feel free to reach out for any queries or support related to the library system.</p>
+
+        <!-- Contact Info -->
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin-top: 40px;">
+            <div style="flex: 1; min-width: 250px; margin-bottom: 30px;">
+                <h4 style="color: #2c3e50;">📍 Address</h4>
+                <p style="color: #555;">Malla Reddy Engineering College,<br>Hyderabad, Telangana, India</p>
+            </div>
+            <div style="flex: 1; min-width: 250px; margin-bottom: 30px;">
+                <h4 style="color: #2c3e50;">📞 Phone</h4>
+                <p style="color: #555;">+91 98765 43210</p>
+            </div>
+            <div style="flex: 1; min-width: 250px; margin-bottom: 30px;">
+                <h4 style="color: #2c3e50;">✉️ Email</h4>
+                <p style="color: #555;">librarysupport@example.com</p>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form action="#" method="POST" style="margin-top: 30px;">
+            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                <input type="text" name="name" placeholder="Your Name" required style="flex: 1; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px;">
+                <input type="email" name="email" placeholder="Your Email" required style="flex: 1; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px;">
+            </div>
+            <input type="text" name="subject" placeholder="Subject" required style="width: 100%; margin-top: 20px; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px;">
+            <textarea name="message" placeholder="Your Message" rows="5" required style="width: 100%; margin-top: 20px; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px;"></textarea>
+            <button type="submit" style="margin-top: 20px; padding: 12px 25px; background-color: #1e2a38; color: white; border: none; border-radius: 6px; font-size: 16px; cursor: pointer;">
+                Send Message
+            </button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div style="text-align: center; padding: 30px 10px; background-color: #1e2a38; color: #ccc; font-size: 14px;">
+        &copy; 2025 Library Management System. All rights reserved.
+    </div>
+
+</body>
+</html>

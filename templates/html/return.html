@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Return Book - Library Management</title>
+    <meta charset="UTF-8">
+</head>
+<body style="margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #eef2f5;">
+
+    <!-- Navbar -->
+    <div style="background-color: #1e2a38; padding: 20px 0;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; color: white; padding: 0 20px;">
+            <h1 style="margin: 0; font-size: 26px;">📚 Library Management</h1>
+            <div style="display: flex; align-items: center;">
+                <a href="{% url 'index' %}" style="color: white; margin: 0 15px; text-decoration: none; font-weight: 500;">Home</a>
+                <a href="{% url 'books' %}" style="color: white; margin: 0 15px; text-decoration: none; font-weight: 500;">Books</a>
+                <a href="{% url 'return' %}" style="color: white; margin: 0 15px; text-decoration: none; font-weight: 600;">Return</a>
+                <a href="{% url 'contact' %}" style="color: white; margin: 0 15px; text-decoration: none; font-weight: 500;">Contact</a>
+                <form action="{% url 'home' %}" method="get" style="margin-left: 15px;">
+                    <button type="submit" style="background-color: #e74c3c; border: none; padding: 8px 16px; color: white; font-size: 16px; border-radius: 4px; cursor: pointer;">
+                        Logout
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div style="max-width: 600px; margin: 80px auto; padding: 20px;">
+        <h2 style="color: #2c3e50; text-align: center; font-size: 32px;">🔄 Return Book</h2>
+        <p style="text-align: center; font-size: 16px; color: #555;">Enter member and book details to process the return.</p>
+
+        <div style="display: flex; justify-content: center; margin-top: 40px;">
+            <!-- Return Transaction -->
+            <div style="background-color: white; width: 100%; max-width: 500px; padding: 30px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <h3 style="color: #2c3e50; margin-bottom: 15px;">Return Book</h3>
+                <form action='#' method="get" style="display: flex; flex-direction: column; gap: 18px;">
+                    {% csrf_token %}
+                    <label for="member_id" style="font-size: 14px; color: #555; font-weight: 500;">Member ID</label>
+                    <input id="member_id" type="text" name="member_id" placeholder="Member ID" required
+                           style="padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px;">
+                    
+                    <label for="book_id" style="font-size: 14px; color: #555; font-weight: 500;">Book ID</label>
+                    <input id="book_id" type="text" name="book_id" placeholder="Book ID" required
+                           style="padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px;">
+
+                    <button type="submit" style="padding: 12px; background-color: #1e2a38; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 16px;">
+                        Return Book
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="text-align: center; padding: 30px 10px; background-color: #1e2a38; color: #ccc; font-size: 14px;">
+        &copy; 2025 Library Management System. All rights reserved.
+    </div>
+
+</body>
+</html>

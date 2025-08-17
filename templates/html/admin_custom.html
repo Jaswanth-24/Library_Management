@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard - Library</title>
+</head>
+<body style="margin: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f8f9fa;">
+
+    <!-- Header -->
+    <div style="background-color: #34495e; padding: 20px; color: white; display: flex; justify-content: space-between; align-items: center;">
+        <h1 style="margin: 0; font-size: 28px;">Library Admin Dashboard</h1>
+            <a href="{% url 'logout' %}" style="background-color: #e74c3c; color: white; padding: 10px 16px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+                Logout
+            </a>
+    </div>
+
+    <!-- Navigation Section -->
+    <div style="max-width: 900px; margin: 40px auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; padding: 0 20px;">
+
+        <a href="#" style="display: block; background-color: #ffffff; border: 1px solid #ddd; border-radius: 10px; padding: 30px 20px; text-align: center; text-decoration: none; color: #2c3e50; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s;">
+            <strong>Add Member</strong>
+        </a>
+
+        <a href="#" style="display: block; background-color: #ffffff; border: 1px solid #ddd; border-radius: 10px; padding: 30px 20px; text-align: center; text-decoration: none; color: #2c3e50; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s;">
+            <strong>Add Book</strong>
+        </a>
+
+        <a href="#" style="display: block; background-color: #ffffff; border: 1px solid #ddd; border-radius: 10px; padding: 30px 20px; text-align: center; text-decoration: none; color: #2c3e50; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s;">
+            <strong>View Members</strong>
+        </a>
+
+        <a href="#" style="display: block; background-color: #ffffff; border: 1px solid #ddd; border-radius: 10px; padding: 30px 20px; text-align: center; text-decoration: none; color: #2c3e50; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s;">
+            <strong>View Books</strong>
+        </a>
+
+        <a href="#" style="display: block; background-color: #ffffff; border: 1px solid #ddd; border-radius: 10px; padding: 30px 20px; text-align: center; text-decoration: none; color: #2c3e50; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s;">
+            <strong>Issue Book</strong>
+        </a>
+
+        <a href="#" style="display: block; background-color: #ffffff; border: 1px solid #ddd; border-radius: 10px; padding: 30px 20px; text-align: center; text-decoration: none; color: #2c3e50; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s;">
+            <strong>View Issued Books</strong>
+        </a>
+
+    </div>
+
+    <!-- Footer -->
+    <div style="text-align: center; padding: 20px; color: #aaa; font-size: 14px; margin-top: 40px;">
+        &copy; 2025 Library Management System
+    </div>
+
+</body>
+</html>
